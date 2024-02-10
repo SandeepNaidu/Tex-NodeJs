@@ -1,0 +1,35 @@
+const express = require('express');
+const router = express.Router();
+const admin = require('./admin');
+const roles = require('./roles');
+const components = require('./components');
+const groups = require('./groups');
+const policies = require('./policies');
+const auth = require('./auth');
+const users = require('./users');
+const alerts = require('./alerts');
+const flashMessages = require('./flash-messages');
+const userTypes = require('./userTypes');
+const tags = require('./tags');
+const avids = require('./avids');
+const posts = require('./posts');
+const posts2 = require('./posts2');
+const portfolio = require('./portfolio');
+
+router.use('/admin', admin);
+router.use('/roles', roles);
+router.use('/components', components);
+router.use('/groups', groups);
+router.use('/policies', policies);
+router.use('/auth', auth);
+router.use('/users', users);
+router.use('/alerts', alerts);
+router.use('/flashMessages', flashMessages);
+router.use('/userTypes', userTypes);
+router.use('/tags', tags);
+router.use('/avids', avids);
+router.use('/posts', posts);
+router.use('/posts2', posts2);
+router.use('/portfolio', portfolio);
+
+module.exports = router;

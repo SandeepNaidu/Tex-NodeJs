@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/texapi
+hooks:
+  AfterInstall:
+    - location: scripts/cleanup.sh
+      runas: root
+    - location: scripts/app_start.sh
+      runas: root
+    - location: scripts/verify_app.sh
+      runas: root

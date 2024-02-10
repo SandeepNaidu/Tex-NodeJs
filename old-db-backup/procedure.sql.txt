@@ -1,0 +1,13 @@
+DELIMITER //
+
+CREATE PROCEDURE tex_getUserByUsername`(
+username varchar(45))
+BEGIN
+SELECT users.*, roles.type as roleType
+FROM users
+INNER JOIN roles
+ON roles.id = users.roleId
+WHERE users.username = username;
+END //
+
+DELIMITER ;
